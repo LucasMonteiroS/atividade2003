@@ -1,0 +1,18 @@
+<p style="color: green"><%= notice %></p>
+<div class="center-title"
+<p class="modify-title">List of Products</p>
+</div>
+<div id="products">
+<% @products.each do |product| %>
+  <div class="product-card">
+    <%= render product %>
+    <p class="show-button">
+      <%= link_to product, class:"button" do %>
+        Show this Product
+      <% end %>
+    </p>
+  </div>
+<% end %>
+</div>
+
+<%= link_to "New Product", new_product_path, class:"button", id: "new-product-button" %>

@@ -1,0 +1,16 @@
+
+<div class="center-title"
+<p>Editing Product</p>
+</div>
+<div class="center-button-edit">
+<%= link_to "Show this product", @product, class:"button" %>
+</div>
+<%= render "form", product: @product %>
+
+<br>
+
+<div>
+  <%= link_to products_path, class:"button", id: "new-product-button" do  %>
+    Back to Products
+  <% end %>
+</div>
